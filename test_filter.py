@@ -55,6 +55,7 @@ def test_toggle_all(page:Page):
     expect(page.locator("body")).to_contain_text("Do one Playwright project")
 
     #untick completed todos
+    page.get_by_role("link", name="All").click()
     renew_passport = page.locator("li").filter(has_text="Renew my passport")
     renew_passport.locator('input[type="checkbox"]').uncheck()
     renew_license = page.locator("li").filter(has_text="Renew my driving license")
@@ -62,7 +63,6 @@ def test_toggle_all(page:Page):
     doProject = page.locator("li").filter(has_text="Do one Playwright project")
     doProject.locator('input[type="checkbox"]').uncheck()
 
-    page.get_by_role("link", name="All").click()
     expect(page.locator("body")).to_contain_text("Renew my passport")
     expect(page.locator("body")).to_contain_text("Renew my driving license")
     expect(page.locator("body")).to_contain_text("Do one Playwright project")
