@@ -1,6 +1,6 @@
-# ToDoMVC React Automation Project
+# ToDoMVC Automation Project
 
-UI test automation for the React TodoMVC application using Python, Pytest, and Playwright.
+UI test automation for the TodoMVC application using Python, Pytest, and Playwright.
 
 ## Tech Stack
 
